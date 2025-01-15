@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suryansh's professional portfolio showcasing skills, projects, and contact information.">
+    <meta name="author" content="Suryansh">
+    <meta name="keywords" content="Portfolio, Web Development, Suryansh, Computer Science, Projects">
+    <title>Suryansh's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+            height: 100vh;
+            background: #000;
+        }
+
+        /* Full Screen Sections */
+        section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: #333;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+            font-size: 2rem;
+        }
+
+        #hero h1 {
+            font-size: 5rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff851b;
+        }
+
+        /* About Section */
+        #about {
+            background: #222;
+            text-align: center;
+        }
+
+        #about .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 60px 20px;
+        }
+
+        #about h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Skills Section */
+        #skills {
+            background: #333;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skill-card {
+            background: #444;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            background-color: #ff851b;
+        }
+
+        /* Goals Section */
+        #goals {
+            background: #222;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #goals h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #goals .goal {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+            color: #ff851b;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #222;
+            padding: 60px 20px;
+        }
+
+        .contact-form {
+            width: 80%;
+            margin: 0 auto;
+            background: #333;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: #ff851b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #d9780e;
+        }
+
+        /* Section Transitions */
+        section {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        section.visible {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div>
+            <h1>Suryansh</h1>
+            <p>Professional Portfolio of a Computer Science Enthusiast</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Suryansh, a passionate Computer Science student. I am an avid problem solver and continuously improving my skills. Currently, I am preparing for UPSC after completing my BTech. I am always eager to learn new technologies and solve complex challenges.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Programming Languages</h3>
+                <div class="skill-bar">
+                    <span style="width: 85%;"></span>
+                </div>
+                <p>C++, Python, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <div class="skill-bar">
+                    <span style="width: 80%;"></span>
+                </div>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data Structures & Algorithms</h3>
+                <div class="skill-bar">
+                    <span style="width: 75%;"></span>
+                </div>
+                <p>Competitive Programming, Problem Solving</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section id="goals">
+        <h2>Goals</h2>
+        <!-- Roadmap Section -->
+<section id="roadmap">
+    <h2>My Goals Roadmap</h2>
+
+    <!-- Short Term Goals -->
+    <div class="roadmap-stage">
+        <div class="roadmap-box short-term">
+            <h3>Short Term Goals</h3>
+            <p>Get Placement and Internship</p>
+        </div>
+        <div class="roadmap-line"></div>
+    </div>
+
+    <!-- Sub-goal 1: Gain good CGPA -->
+    <div class="roadmap-stage">
+        <div class="roadmap-box">
+            <h3 id="subgoal-1" class="clickable-goal">Sub-goal 1: Gain good CGPA in each semester</h3>
+            <p>Click on the goal to track your CGPA for each semester.</p>
+
+            <!-- Semester Goal Tree (Initially Hidden) -->
+            <div id="semester-goals" class="semester-tree" style="display: none;">
+                <div class="tree-node">
+                    <div class="node-title">Semester 1</div>
+                    <div class="sub-node">
+                        <label for="semester1-cgpa">Enter CGPA: </label>
+                        <input type="number" id="semester1-cgpa" placeholder="Enter CGPA" step="0.01" max="10" min="0">
+                    </div>
+                </div>
+                <div class="tree-node">
+                    <div class="node-title">Semester 2</div>
+                    <div class="sub-node">
+                        <label for="semester2-cgpa">Enter CGPA: </label>
+                        <input type="number" id="semester2-cgpa" placeholder="Enter CGPA" step="0.01" max="10" min="0">
+                    </div>
+                </div>
+                <div class="tree-node">
+                    <div class="node-title">Semester 3</div>
+                    <div class="sub-node">
+                        <label for="semester3-cgpa">Enter CGPA: </label>
+                        <input type="number" id="semester3-cgpa" placeholder="Enter CGPA" step="0.01" max="10" min="0">
+                    </div>
+                </div>
+                <div class="tree-node">
+                    <div class="node-title">Semester 4</div>
+                    <div class="sub-node">
+                        <label for="semester4-cgpa">Enter CGPA: </label>
+                        <input type="number" id="semester4-cgpa" placeholder="Enter CGPA" step="0.01" max="10" min="0">
+                    </div>
+                </div>
+                <div class="tree-node">
+                    <div class="node-title">Semester 5</div>
+                    <div class="sub-node">
+                        <label for="semester5-cgpa">Enter CGPA: </label>
+                        <input type="number" id="semester5-cgpa" placeholder="Enter CGPA" step="0.01" max="10" min="0">
+                    </div>
+                </div>
+                <div class="tree-node">
+                    <div class="node-title">Semester 6</div>
+                    <div class="sub-node">
+                        <label for="semester6-cgpa">Enter CGPA: </label>
+                        <input type="number" id="semester6-cgpa" placeholder="Enter CGPA" step="0.01" max="10" min="0">
+                    </div>
+                </div>
+                <div class="tree-node">
+                    <div class="node-title">Semester 7</div>
+                    <div class="sub-node">
+                        <label for="semester7-cgpa">Enter CGPA: </label>
+                        <input type="number" id="semester7-cgpa" placeholder="Enter CGPA" step="0.01" max="10" min="0">
+                    </div>
+                </div>
+                <div class="tree-node">
+                    <div class="node-title">Semester 8</div>
+                    <div class="sub-node">
+                        <label for="semester8-cgpa">Enter CGPA: </label>
+                        <input type="number" id="semester8-cgpa" placeholder="Enter CGPA" step="0.01" max="10" min="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="roadmap-line"></div>
+    </div>
+
+    <!-- Long Term Goals -->
+    <div class="roadmap-stage">
+        <div class="roadmap-box long-term">
+            <h3>Long Term Goal</h3>
+            <p>Prepare for UPSC</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    #roadmap {
+        background: #222;
+        color: #fff;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    #roadmap h2 {
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+        color: #ff851b;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .roadmap-stage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .roadmap-box {
+        background: linear-gradient(145deg, #444, #555);
+        padding: 20px;
+        margin: 0 20px;
+        border-radius: 15px;
+        width: 250px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        z-index: 1;
+    }
+
+    .roadmap-box h3 {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .roadmap-box p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .roadmap-box input[type="checkbox"] {
+        margin-top: 10px;
+    }
+
+    .roadmap-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .roadmap-line {
+        height: 4px;
+        background-color: #ff851b;
+        width: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .long-term {
+        background: linear-gradient(145deg, #ff851b, #f77d12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .roadmap-stage:first-child .roadmap-line {
+        display: none;
+    }
+
+    .roadmap-stage:last-child .roadmap-line {
+        display: none;
+    }
+
+    /* Tree Structure */
+    .semester-tree {
+        text-align: left;
+        margin-top: 20px;
+        font-size: 1.1rem;
+        margin-left: 30px;
+        color: #fff;
+        display: none;
+    }
+
+    .tree-node {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        border-left: 3px solid #ff851b;
+    }
+
+    .node-title {
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: #ff851b;
+        transition: color 0.3s;
+    }
+
+    .node-title:hover {
+        color: #f77d12;
+    }
+
+    .sub-node {
+        margin-left: 20px;
+        font-size: 1.2rem;
+    }
+
+    .sub-node input[type="number"] {
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ff851b;
+        background-color: #444;
+        color: #fff;
+    }
+
+    .clickable-goal {
+        cursor: pointer;
+        color: #ff851b;
+        transition: color 0.3s;
+    }
+
+    .clickable-goal:hover {
+        color: #f77d12;
+    }
+</style>
+
+<script>
+    // Toggle visibility of semester goals when clicking on Sub-goal 1
+    document.getElementById("subgoal-1").addEventListener("click", function() {
+        const semesterGoals = document.getElementById("semester-goals");
+        if (semesterGoals.style.display === "none" || semesterGoals.style.display === "") {
+            semesterGoals.style.display = "block";
+        } else {
+            semesterGoals.style.display = "none";
+        }
+    });
+</script>
+
+    </section>
+
+    <!-- Contact Section -->
+    
+        <h2>Contact</h2>
+        <!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for any queries or opportunities!</p>
+
+    <div class="contact-form">
+        <form action="submit-form.php" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="social-icon linkedin">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/your-instagram-profile" target="_blank" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/your-whatsapp-number" target="_blank" class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://github.com/your-github-profile" target="_blank" class="social-icon github">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</section>
+
+<style>
+    #contact {
+        background: #222;
+        color: #fff;
+        padding: 50px 20px;
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+    }
+
+    #contact h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #ff851b;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: slideUp 1s ease-out 0.5s forwards;
+    }
+
+    #contact p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #aaa;
+        opacity: 0;
+        animation: slideUp 1s ease-out 1s forwards;
+    }
+
+    .contact-form {
+        background: #333;
+        padding: 30px;
+        margin: 0 auto;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        animation: slideIn 1s ease-out 1.5s forwards;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 2s forwards;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        color: #ff851b;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        background-color: #444;
+        border: 1px solid #444;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 1rem;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 2s forwards;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+        border-color: #ff851b;
+        outline: none;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+    }
+
+    .submit-btn {
+        padding: 12px 25px;
+        background: #ff851b;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background 0.3s ease;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 2.5s forwards;
+    }
+
+    .submit-btn:hover {
+        background: #f77d12;
+        transform: scale(1.05);
+    }
+
+    /* Social Media Links */
+    .social-links {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon {
+        font-size: 2rem;
+        color: #fff;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.1);
+        color: #ff851b;
+    }
+
+    .social-icon.linkedin:hover {
+        color: #0077b5;
+    }
+
+    .social-icon.instagram:hover {
+        color: #e4405f;
+    }
+
+    .social-icon.whatsapp:hover {
+        color: #25d366;
+    }
+
+    .social-icon.github:hover {
+        color: #333;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<!-- Add the FontAwesome CDN for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Suryansh. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll Animations
+        const sections = document.querySelectorAll('section');
+        const options = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
